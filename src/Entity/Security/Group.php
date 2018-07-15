@@ -7,7 +7,7 @@ use FOS\UserBundle\Model\Group as BaseGroup;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="group")
+ * @ORM\Table(name="groups")
  */
 class Group extends BaseGroup {
   /**
