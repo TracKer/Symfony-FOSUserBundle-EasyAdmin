@@ -17,14 +17,4 @@ class User extends BaseUser {
    * @ORM\GeneratedValue(strategy="AUTO")
    */
   protected $id;
-
-  /**
-   * @ORM\ManyToMany(targetEntity="App\Entity\Security\Group")
-   * @ORM\JoinTable(
-   *   name="user_group",
-   *   joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-   *   inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
-   * )
-   */
-  protected $groups;
 }
