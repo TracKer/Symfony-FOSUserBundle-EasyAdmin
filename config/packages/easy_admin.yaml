@@ -1,6 +1,31 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\Security\User
+            list:
+                fields:
+                    - username
+                    - usernameCanonical
+                    - email
+                    - emailCanonical
+                    - enabled
+                    - lastLogin
+                    - confirmationToken
+            edit:
+                fields:
+                    - username
+                    - usernameCanonical
+                    - email
+                    - emailCanonical
+                    - enabled
+                    - salt
+                    - password
+                    - lastLogin
+                    - confirmationToken
+                    - passwordRequestedAt
+                    -
+                        property: roles
+                        type: Symfony\Component\Form\Extension\Core\Type\CollectionType
+                        type_options:
+                            entry_type: App\Form\Type\RoleChoiceType
+                            required: true
