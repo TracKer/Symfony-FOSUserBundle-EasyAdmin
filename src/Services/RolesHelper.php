@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\Role\RoleHierarchyInterface;
 
@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\Role\RoleHierarchyInterface;
  */
 class RolesHelper {
   /**
-   * @var TokenStorage
+   * @var TokenStorageInterface
    */
   private $tokenStorage;
 
@@ -26,7 +26,7 @@ class RolesHelper {
    */
   private $roles = [];
 
-  public function __construct(TokenStorage $tokenStorage, RoleHierarchyInterface $roleHierarchy) {
+  public function __construct(TokenStorageInterface $tokenStorage, RoleHierarchyInterface $roleHierarchy) {
     $this->tokenStorage = $tokenStorage;
     $this->roleHierarchy = $roleHierarchy;
   }
