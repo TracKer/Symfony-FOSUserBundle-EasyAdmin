@@ -1,0 +1,56 @@
+$enable-gradients: true;
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+////@import "../../../../node_modules/bootstrap/scss/mixins/alert";
+//@import "../../mixins/blur";
+@import "../../mixins/box-shadow";
+@import "../../mixins/border-radius";
+
+body {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+//    .flashbag {
+//      position: fixed;
+//      top: 20px;
+//      left: 20px;
+//      right: 20px;
+//    }
+
+    .login-form {
+      padding: 15px;
+      background-color: #fff;
+      box-sizing: content-box;
+      width: 300px;
+
+      //@include blur(10px);
+      @include border-radius(5px);
+      @include box-shadow(0, 0, 0, 5px, transparentize(#fff, .75));
+
+      input {
+        text-align: center;
+      }
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+//.flash-error {
+//  $color: #ed541d;
+//  @include alert-variant($color, darken($color, 15%), #fff);
+//}
+
+@import "background";

@@ -1,0 +1,36 @@
+@import "../../mixins/filter";
+
+$blur: 10px;
+
+body .background {
+  position: fixed;
+  top: ($blur * -2);
+  bottom: ($blur * -2);
+  left: ($blur * -2);
+  right: ($blur * -2);
+  z-index: -10;
+  background-size: cover;
+  background-position: center;
+
+  @include filter(blur, $blur);
+
+  &, &.bg-1 {
+    background-image: url('/images/login/bg-1.jpg');
+  }
+
+  &.bg-2 {
+    background-image: url('/images/login/bg-2.jpg');
+  }
+
+  &.bg-3 {
+    background-image: url('/images/login/bg-3.jpg');
+  }
+
+  &.bg-4 {
+    background-image: url('/images/login/bg-4.jpg');
+  }
+
+  &.bg-5 {
+    background-image: url('/images/login/bg-5.jpg');
+  }
+}
