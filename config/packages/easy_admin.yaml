@@ -4,17 +4,12 @@ easy_admin:
             class: App\Entity\Security\User
             list:
                 fields:
-                    - username
-                    - usernameCanonical
-                    - email
                     - emailCanonical
                     - enabled
                     - lastLogin
                     - confirmationToken
             edit:
                 fields:
-                    - username
-                    - usernameCanonical
                     - email
                     - emailCanonical
                     - enabled
