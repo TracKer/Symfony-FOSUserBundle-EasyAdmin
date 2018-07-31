@@ -22,20 +22,26 @@
              placeholder="{{ 'security.login.password'|trans }}"/>
     </div>
 
-    <div class="form-group custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="remember_me" name="_remember_me" value="on"
-             checked="checked">
-      <label class="custom-control-label" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="remember_me" name="_remember_me" value="on"
+                 checked="checked">
+          <label class="custom-control-label" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group text-right">
+          <a href="{{ path('fos_user_resetting_request') }}">Forgot password</a>
+        </div>
+      </div>
     </div>
 
     <div class="form-group">
       <button class="btn btn-lg btn-block btn-outline-primary" type="submit" id="_submit" name="_submit">
         {{ 'security.login.submit'|trans }}
       </button>
-    </div>
-
-    <div class="form-group text-center">
-      <a href="{{ path('fos_user_resetting_request') }}">Forgot password</a>
     </div>
   </form>
 </div>

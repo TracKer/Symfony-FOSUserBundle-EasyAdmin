@@ -27,7 +27,7 @@ body {
 //      right: 20px;
 //    }
 
-    .login-form {
+    .login-form form {
       padding: 15px;
       background-color: #fff;
       box-sizing: content-box;
@@ -41,7 +41,7 @@ body {
         text-align: center;
       }
 
-      .form-group:last-child {
+      >.form-group:last-child {
         margin-bottom: 0;
       }
     }
