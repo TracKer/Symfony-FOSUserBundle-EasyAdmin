@@ -1,7 +1,12 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
   {% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ error.messageKey|trans(error.messageData, 'security') }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   {% endif %}
 
 <form action="{{ path("fos_user_security_check") }}" method="post">
