@@ -41,7 +41,7 @@ body {
         text-align: center;
       }
 
-      form > .form-group:last-child {
+      form > [class~='form-group']:last-of-type {
         margin-bottom: 0;
       }
 
