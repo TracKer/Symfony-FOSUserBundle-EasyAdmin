@@ -5,3 +5,5 @@ fos_user:
   from_email:
     address: "%mailer_user%"
     sender_name: "%mailer_user%"
+  service:
+    user_manager: app.user_manager

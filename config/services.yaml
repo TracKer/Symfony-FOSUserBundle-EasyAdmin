@@ -35,3 +35,12 @@ services:
     class: App\Services\RolesHelper
     arguments: ['@security.token_storage', '@security.role_hierarchy']
     public: true
+
+  app.user_manager:
+    class: App\Entity\Security\UserManager
+    arguments:
+      - '@fos_user.util.password_updater'
+      - '@fos_user.util.canonical_fields_updater'
+      - '@fos_user.object_manager'
+      - '%fos_user.model.user.class%'
+    public: false
